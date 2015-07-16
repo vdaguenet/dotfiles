@@ -1,1 +1,14 @@
-/Users/hellohikimori/.gitconfig
+[user]
+	name = Valentin Daguenet
+	email = valentin.daguenet@gmail.com
+[color]
+	ui = true
+	branch = true
+	diff = true
+	interactive = true
+	status = true
+[alias]
+	ci = commit
+	br = branch
+	ch = checkout
+	st = status
