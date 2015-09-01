@@ -5,6 +5,7 @@ My ST3 Packages
 * Babel
 * BracketHighlighter
 * DocBlockr
+* EditorConfig
 * Emmet
 * EsFormatter
 * GitGutter
