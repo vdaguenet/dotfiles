@@ -24,4 +24,5 @@ My ST3 Packages
 * Stylus
 * SublimeLinter
 * SublimeLinter-contrib-eslint
+* SublimeLinter-contrib-stylint
 * Tomorrow Color Schemes
