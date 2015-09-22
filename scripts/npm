@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Inspired by https://github.com/kewah/dotfiles/blob/master/scripts/npm
+
+npm_run() {
+  echo "NPM:"
+  echo "Installing packages..."
+
+  local packages="\
+    babel-eslint \
+    bower \
+    esformatter \
+    eslint \
+    eslint-plugin-babel \
+    eslint-plugin-react \
+    grunt-cli \
+    gulp \
+    nodemon \
+    pure-prompt \
+    stylint"
+
+  npm i $packages -g --quiet
+}

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Inspired by https://github.com/kewah/dotfiles/blob/master/scripts/gem
+
+gem_install() {
+  if ! type ${@} > /dev/null; then
+    sudo gem install ${@}
+  fi
+}
+
+gem_run() {
+  echo "GEM:"
+  echo "Installing packages..."
+
+  sudo gem update --system && sudo gem update
+
+  local -a PACKAGES_NAME=(
+    "compass"
+  )
+
+  for index in ${!PACKAGES_NAME[*]}; do
+    gem_install ${PACKAGES_NAME[$index]}
+  done
+}
