@@ -1,0 +1,31 @@
+#!/bin/bash
+
+source ./scripts/brew
+source ./scripts/npm
+source ./scripts/gem
+
+# I does not want to write sudo everytime
+sudo chown -R $USER /usr/local
+
+# Install homebrew and its packages
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+brew update
+brew_run
+
+# Install GEM packages
+gem_run
+
+# NPM packages
+npm_run
+
+# Link everything
+ln -fs "${PWD}/dotfiles/eslintrc" "${HOME}/.eslintrc"
+ln -fs "${PWD}/dotfiles/gitconfig" "${HOME}/.gitconfig"
+ln -fs "${PWD}/dotfiles/gitignore" "${HOME}/.gitignore"
+ln -fs "${PWD}/dotfiles/stylintrc" "${HOME}/.stylintrc"
+ln -fs "${PWD}/dotfiles/zshrc" "${HOME}/.zshrc"
+
+# Composer
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+
+echo "Installation completed!"
