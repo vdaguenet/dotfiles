@@ -26,6 +26,13 @@ ln -fs "${PWD}/dotfiles/stylintrc" "${HOME}/.stylintrc"
 ln -fs "${PWD}/dotfiles/zshrc" "${HOME}/.zshrc"
 
 # Composer
-curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+curl -sS https://getcomposer.org/installer | php
+mv composer.phar /usr/local/bin/composer
+
+# Webponize
+curl -O https://1000ch.github.io/webponize/webponize.tar.gz
+tar -zxvf webponize.tar.gz
+rm webponize.tar.gz
+mv WebPonize.app /Applications
 
 echo "Installation completed!"
