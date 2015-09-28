@@ -47,7 +47,6 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"SublimeLinter-jshint",
 		"Vintage"
 	],
 	"line_padding_bottom": 3,
@@ -62,7 +61,7 @@
 	"scroll_past_end": true,
 	"sidebar_large": true,
 	"tab_size": 2,
-	"theme": "Material-Theme-Darker.sublime-theme",
+	"theme": "Material-Theme.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": true,
 	"trim_trailing_white_space_on_save": true,

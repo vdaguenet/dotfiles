@@ -4,10 +4,11 @@ source ./scripts/brew
 source ./scripts/npm
 source ./scripts/gem
 
-# I does not want to write sudo everytime
+# I do not want to write sudo everytime
 sudo chown -R $USER /usr/local
 
 # Install homebrew and its packages
+echo "Installing brew..."
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew update
 brew_run
@@ -26,10 +27,12 @@ ln -fs "${PWD}/dotfiles/stylintrc" "${HOME}/.stylintrc"
 ln -fs "${PWD}/dotfiles/zshrc" "${HOME}/.zshrc"
 
 # Composer
+echo "Installing composer..."
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
 # Webponize
+echo "Installing Webponize..."
 curl -O https://1000ch.github.io/webponize/webponize.tar.gz
 tar -zxvf webponize.tar.gz
 rm webponize.tar.gz

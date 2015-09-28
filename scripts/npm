@@ -15,9 +15,11 @@ npm_run() {
     eslint-plugin-react \
     grunt-cli \
     gulp \
+    less \
     nodemon \
     pure-prompt \
-    stylint"
+    stylint \
+    webpack"
 
   npm i $packages -g --quiet
 }
