@@ -75,7 +75,5 @@ brew_run() {
   done
 
   # names that does not follow the same pattern
-  cask_install "Sublime Text 3" "sublime-text"
-  # cask_install "Alfred 2" "alfred"
   cask_install "iTerm 2" "iterm2"
 }

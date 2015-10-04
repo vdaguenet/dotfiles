@@ -26,6 +26,12 @@ ln -fs "${PWD}/dotfiles/gitignore" "${HOME}/.gitignore"
 ln -fs "${PWD}/dotfiles/stylintrc" "${HOME}/.stylintrc"
 ln -fs "${PWD}/dotfiles/zshrc" "${HOME}/.zshrc"
 
+# Install pure prompt
+rm "${HOME}/.oh-my-zsh/themes/pure.zsh-theme"
+cp "/usr/local/lib/node_modules/pure-prompt/pure.zsh" "${HOME}/.oh-my-zsh/custom/pure.zsh-theme"
+cp "/usr/local/lib/node_modules/pure-prompt/async.zsh" "${HOME}/.oh-my-zsh/custom/async.zsh"
+
+
 # Composer
 echo "Installing composer..."
 curl -sS https://getcomposer.org/installer | php
